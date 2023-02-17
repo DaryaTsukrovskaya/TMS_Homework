@@ -1,6 +1,8 @@
-package by.teachmeskills.homework.hw_10022023.hw_17022023;
+package by.teachmeskills.homework.hw_17022023;
+
 import java.util.Scanner;
-public class SixthTask {
+
+public class Task6 {
     public static void main(String[] args) {
         System.out.println("Please enter the array size: ");
         Scanner scan = new Scanner(System.in);
@@ -36,4 +38,3 @@ public class SixthTask {
         }
     }
 }
-

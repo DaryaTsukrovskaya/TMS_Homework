@@ -1,5 +1,5 @@
-package by.teachmeskills.homework.hw_10022023.hw_17022023;
-public class ThirdTask {
+package by.teachmeskills.homework.hw_17022023;
+public class Task3 {
     public static void main(String[] args) {
         for (int i = 0; i < 4; i++) {
             System.out.println("*****");

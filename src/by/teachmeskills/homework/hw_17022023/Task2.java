@@ -1,6 +1,7 @@
-package by.teachmeskills.homework.hw_10022023.hw_17022023;
+package by.teachmeskills.homework.hw_17022023;
+
 import java.util.Scanner;
-public class SecondTask {
+public class Task2 {
     public static void main(String[] args) {
         for (; ; ) {
             System.out.println("Please enter number(1-7) to get result or 0 to finish");

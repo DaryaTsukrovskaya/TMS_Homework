@@ -1,6 +1,9 @@
-package by.teachmeskills.homework.hw_10022023.hw_17022023;
+package by.teachmeskills.homework.hw_17022023;
+
 import java.util.Scanner;
-public class FirstTask {
+import java.util.Scanner;
+
+public class Task1 {
     public static void main(String[] args) {
         System.out.println("Please enter the  rectangle sides : ");
         Scanner scanner = new Scanner(System.in);
@@ -17,3 +20,4 @@ public class FirstTask {
 
     }
 }
+

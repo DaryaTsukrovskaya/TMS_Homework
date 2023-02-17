@@ -1,6 +1,6 @@
-package by.teachmeskills.homework.hw_10022023.hw_17022023;
-import java.util.Arrays;
-public class FifthTask {
+package by.teachmeskills.homework.hw_17022023;
+
+public class Task5 {
     public static void main(String[] args) {
         int size = 10;
         boolean sorted = false;

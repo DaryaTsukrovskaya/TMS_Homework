@@ -1,6 +1,5 @@
-package by.teachmeskills.homework.hw_10022023.hw_17022023;
-
-public class FourthTask {
+package by.teachmeskills.homework.hw_17022023;
+public class Task4 {
     public static void main(String[] args) {
         double[] vec = {-1.12, 20, -50, -7.34, -9, 100, 2};
         double min = vec[0];
@@ -39,5 +38,4 @@ public class FourthTask {
         }
 
     }
-
 }
