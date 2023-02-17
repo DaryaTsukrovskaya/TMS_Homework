@@ -1,6 +1,4 @@
 package by.teachmeskills.homework.hw_17022023;
-
-import java.util.Scanner;
 import java.util.Scanner;
 
 public class Task1 {
