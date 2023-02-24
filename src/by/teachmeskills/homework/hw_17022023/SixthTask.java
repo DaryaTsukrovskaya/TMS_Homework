@@ -12,10 +12,6 @@ public class SixthTask {
         for (int i = 0; i < size; i++) {
             for (int j = 0; j < size; j++) {
                 mass[i][j] = (int) (10 * Math.random());
-            }
-        }
-        for (int i = 0; i < size; i++) {
-            for (int j = 0; j < size; j++) {
                 System.out.print(mass[i][j]);
             }
             System.out.println();

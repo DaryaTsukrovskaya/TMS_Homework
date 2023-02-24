@@ -2,13 +2,12 @@ package by.teachmeskills.homework.hw_17022023;
 
 public class SeventhTask {
     public static void main(String[] args) {
-        int size = 10;
-        int size2 = 0;
-        int[][] mass = new int[size][];
-        for (int i = 0; i < size; i++) {
-            size2 = (int) (100*Math.random());
-            mass[i] = new int[size2];
-            for (int j = 0; j < size2; j++) {
+        int rows = 10;
+        int columns = 0;
+        int[][] mass = new int[rows][];
+        for (int i = 0; i < rows; i++) {
+            mass[i] = new int[(int) (10*Math.random())];
+            for (int j = 0; j < mass[i].length; j++) {
                 mass[i][j] = (int) (10 * Math.random());
             }
         }

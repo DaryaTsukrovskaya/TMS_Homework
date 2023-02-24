@@ -5,12 +5,10 @@ import java.util.Scanner;
 public class SecondTask {
     public static void main(String[] args) {
         for (; ; ) {
-            System.out.println("Please enter number(1-7) to get result or 0 to finish");
+            System.out.print("Please enter number(1-7) to get result: ");
             Scanner scanner = new Scanner(System.in);
             int num = scanner.nextInt();
             switch (num) {
-                case (0):
-                    return;
                 case (1):
                     System.out.println("Monday");
                     break;
@@ -33,8 +31,10 @@ public class SecondTask {
                     System.out.println("Sunday");
                     break;
                 default:
-                    throw new IllegalArgumentException("Incorrect input");
+                    System.out.println("Incorrect input, please try again");
+
             }
+            if (num > 0 && num < 7) return;
         }
 
     }

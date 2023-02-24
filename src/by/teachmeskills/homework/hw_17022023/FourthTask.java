@@ -7,8 +7,8 @@ public class FourthTask {
         double max = vec[0];
         double sum = 0;
         double product = 1;
-        int Imin = 0;
-        int Imax = 0;
+        int minIndex = 0;
+        int maxIndex = 0;
         for (int i = 0; i < vec.length; i++) {
             if (vec[i] < 0) {
                 sum += vec[i];
@@ -19,20 +19,20 @@ public class FourthTask {
         for (int i = 0; i < vec.length; i++) {
             if (vec[i] > max) {
                 max = vec[i];
-                Imax = i;
+                maxIndex = i;
             }
             if (vec[i] < min) {
                 min = vec[i];
-                Imin = i;
+                minIndex = i;
             }
         }
-        if (Imax > Imin) {
-            for (int i = Imin + 1; i < Imax; i++) {
+        if (maxIndex > minIndex) {
+            for (int i = minIndex + 1; i < maxIndex; i++) {
                 product *= vec[i];
             }
             System.out.println("The product of numbers : " + product);
         } else {
-            for (int i = Imin - 1; i > Imax; i--) {
+            for (int i = minIndex - 1; i > maxIndex; i--) {
                 product *= vec[i];
             }
             System.out.println("The product of numbers : " + product);

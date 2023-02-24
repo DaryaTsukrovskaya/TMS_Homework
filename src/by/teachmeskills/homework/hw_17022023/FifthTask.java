@@ -8,8 +8,6 @@ public class FifthTask {
         int[] mass = new int[size];
         for (int i = 0; i < size; i++) {
             mass[i] = (int) (10 * Math.random());
-        }
-        for (int i = 0; i < size; i++) {
             System.out.print(mass[i] + " ");
         }
         System.out.println();
