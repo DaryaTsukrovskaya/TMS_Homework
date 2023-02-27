@@ -2,7 +2,7 @@ package by.teachmeskills.homework.hw_24022023;
 
 public class Computer {
     String processorType;
-    int ramAmount;
+    int ramVolume;
     int hardDiskCapacity;
     boolean computerisAlive;
     boolean computerOffState;
@@ -12,15 +12,15 @@ public class Computer {
         computerOffState = true;
     }
 
-    public Computer(String processorType, int ramAmount, int hardDiskCapacity) {
+    public Computer(String processorType, int ramVolume, int hardDiskCapacity) {
         this.processorType = processorType;
-        this.ramAmount = ramAmount;
+        this.ramVolume = ramVolume;
         this.hardDiskCapacity = hardDiskCapacity;
     }
 
     public void getInfo() {
         System.out.println("The processor type: " + processorType);
-        System.out.println("Amount of RAM: " + ramAmount);
+        System.out.println("Amount of RAM: " + ramVolume);
         System.out.println("The hard disk capacity: " + hardDiskCapacity);
     }
 

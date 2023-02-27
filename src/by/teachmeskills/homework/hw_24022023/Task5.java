@@ -2,7 +2,6 @@ package by.teachmeskills.homework.hw_24022023;
 
 public class Task5 {
     public static void main(String[] args) {
-//        int num = (int) (100 * Math.random());
         int num = (int) (10 * Math.random());
         System.out.println("The number " + num + " is a power of 2?");
         powRec(num);

@@ -27,9 +27,7 @@ public class Box {
         for (int r = 0; r < rows; r++) {
             for (int c = 0; c < columns; c++) {
                 mass[r][c] = 0;
-                System.out.print(mass[r][c]);
             }
-            System.out.println();
         }
 
         mass[i][j] = key;
@@ -53,16 +51,16 @@ public class Box {
     public static int recursionFunction(int[][] a, int r, int c) {
         int i = r;
         int j = c;
-        if (a[i][j] != 0) return a[i][j];
         int result = 0;
-        if (j >= a[i].length - 1) {
+        if (a[i][j] != 0) return a[i][j];
+        if (j >= a[i].length - 1 && i < a.length - 1) {
             j = 0;
-            ++i;
+            i++;
         }
-        if (i >= a.length) {
-            --i;
+          else if (j < a[i].length - 1 && i <= a.length - 1) {
+            j++;
         }
-        result += recursionFunction(a, i, j +1);
+        result += recursionFunction(a, i, j);
         return result;
     }
 }
