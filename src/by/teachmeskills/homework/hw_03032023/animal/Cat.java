@@ -17,8 +17,4 @@ public class Cat extends Feline {
         System.out.println("The cat is eating fish");
     }
 
-    @Override
-    protected void roam() {
-        System.out.println("The cat is roaming alone");
-    }
 }

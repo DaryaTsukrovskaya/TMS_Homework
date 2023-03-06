@@ -16,9 +16,5 @@ public class Lion extends Feline {
     protected void eat() {
         System.out.println("The lion is eating meat");
     }
-
-    @Override
-    protected void roam() {
-        System.out.println("The lion is roaming in a flock");
-    }
 }
+

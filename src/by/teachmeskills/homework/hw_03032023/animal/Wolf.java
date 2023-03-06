@@ -16,9 +16,5 @@ class Wolf extends Canine {
     protected void eat() {
         System.out.println("The wolf is eating hare");
     }
-
-    @Override
-    protected void roam() {
-        System.out.println("The wolf is roaming in a flock");
-    }
 }
+

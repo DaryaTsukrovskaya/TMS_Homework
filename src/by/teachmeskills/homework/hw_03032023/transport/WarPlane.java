@@ -1,26 +1,29 @@
 package by.teachmeskills.homework.hw_03032023.transport;
 
 public class WarPlane extends AirTransport {
-    boolean surrenderSystem;
-    int rocketNum;
+    private boolean surrenderSystem;
+    private int rocketNum;
 
     public WarPlane(int horsePower, int maxSpeed, int weight, String model, int wingSpan, int minLengthOfRunwayStrip,
                     boolean surrenderSystem, int rocketNum) {
         super(horsePower, maxSpeed, weight, model, wingSpan, minLengthOfRunwayStrip);
         this.surrenderSystem = surrenderSystem;
-        this.rocketNum =rocketNum;
+        this.rocketNum = rocketNum;
     }
 
-    public void getInfo() {
-        System.out.println("The weight of the war-plane: " + this.weight);
-        System.out.println("The power of the war-plane: " + this.horsePower);
-        System.out.println("The maximum speed of the war-plane:" + this.maxSpeed);
-        System.out.println("The model of the war-plane: " + this.model);
-        System.out.println("The wing-span of the war-plane: " + this.wingSpan);
-        System.out.println("The minimal length of the runway strip: " + this.minLengthOfRunwayStrip);
-        System.out.println("The surrender system available: " + this.surrenderSystem);
-        System.out.println("The number of rockets: " + this.rocketNum);
-        System.out.println("The kilowatts power of the war-plane: " + this.kilowattePower());
+    @Override
+    public String toString() {
+        return "WarPlane{" +
+                "surrenderSystem=" + surrenderSystem +
+                ", rocketNum=" + rocketNum +
+                ", wingSpan=" + wingSpan +
+                ", minLengthOfRunwayStrip=" + minLengthOfRunwayStrip +
+                ", horsePower=" + horsePower +
+                ", maxSpeed=" + maxSpeed +
+                ", kilowatts power=" + kilowattePower() +
+                ", weight=" + weight +
+                ", model='" + model + '\'' +
+                '}';
     }
 
     public void shot() {
@@ -31,10 +34,11 @@ public class WarPlane extends AirTransport {
         }
 
     }
-    public void ejection(){
-        if(this.surrenderSystem){
+
+    public void ejection() {
+        if (this.surrenderSystem) {
             System.out.println("Ejection was successful.");
-        }else{
+        } else {
             System.out.println("Ejection failed, you dont have such a system.");
         }
     }

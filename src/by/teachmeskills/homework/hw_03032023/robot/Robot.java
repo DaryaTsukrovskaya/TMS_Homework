@@ -41,6 +41,9 @@ public class Robot implements IRobot {
     public void setLeg(ILeg leg) {
         this.leg = leg;
     }
+    public String getName() {
+        return this.name;
+    }
 
     @Override
     public void action() {
@@ -53,9 +56,5 @@ public class Robot implements IRobot {
     public int getPrice() {
         int price = head.getPrice() + hand.getPrice() + leg.getPrice();
         return price;
-    }
-
-    public String getName() {
-        return this.name;
     }
 }

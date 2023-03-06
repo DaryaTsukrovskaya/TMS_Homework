@@ -1,11 +1,8 @@
 package by.teachmeskills.homework.hw_03032023.animal;
-
 import java.util.Scanner;
-
 public class Dop {
     public static Animal[] animal = new Animal[20];
     static int animalNumberInMass = 0;
-
     public static void changeFeature(String p) {
         for (int i = 0; i < animal.length; i++) {
             if (animal[i].picture.equals(p)) {
@@ -16,12 +13,12 @@ public class Dop {
                 switch (num) {
                     case '1':
                         System.out.println("Enter picture");
-                        String picChange = String.valueOf(in.nextInt());
+                        String picChange = in.nextLine();
                         animal[i].picture = picChange;
                         break;
                     case '2':
                         System.out.println("Enter food");
-                        String foodChange = String.valueOf(in.nextInt());
+                        String foodChange = in.nextLine();
                         animal[i].food = foodChange;
                         break;
                     case '3':
@@ -31,13 +28,13 @@ public class Dop {
                         break;
                     case '4':
                         System.out.println("Enter boundaries");
-                        int bChange = in.nextInt();
-                        animal[i].boundaries = new Animal.Boundaries(bChange, bChange);
+                        int boundChange = in.nextInt();
+                        animal[i].boundaries = new Animal.Boundaries(boundChange, boundChange);
                         break;
                     case '5':
                         System.out.println("Enter location");
-                        int lChange = in.nextInt();
-                        animal[i].location = new Animal.Location(lChange, lChange);
+                        int locationChange = in.nextInt();
+                        animal[i].location = new Animal.Location(locationChange, locationChange);
                         break;
                 }
             }
@@ -69,9 +66,9 @@ public class Dop {
             switch (n) {
                 case '1':
                     System.out.println("Enter animal picture");
-                    String p = String.valueOf(scan.nextInt());
+                    String p = scan.nextLine();
                     System.out.println("Enter animal food");
-                    String f = String.valueOf(scan.nextInt());
+                    String f = scan.nextLine();
                     System.out.println("Enter animal hunger");
                     int h = scan.nextInt();
                     System.out.println("Enter animal first boundary");
@@ -92,50 +89,25 @@ public class Dop {
                             animalNumberInMass++;
                             break;
                         case '2':
-                            Animal uCat = new Cat(p, f, h, new Animal.Boundaries(x, y), new Animal.Location(z, q));
-                            animal[animalNumberInMass] = uCat;
-                            animalNumberInMass++;
+                            System.out.println("Enter a picture of the animal, whose information you would like to see:");
+                            String infoPic = scan.nextLine();
+                            Animal.getInfo(infoPic);
                             break;
                         case '3':
-                            Animal uLion = new Lion(p, f, h, new Animal.Boundaries(x, y), new Animal.Location(z, q));
-                            animal[animalNumberInMass] = uLion;
-                            animalNumberInMass++;
+                            System.out.println("Enter a picture of the animal, whose information you would like to change:");
+                            String chPic = scan.nextLine();
+                            changeFeature(chPic);
                             break;
                         case '4':
-                            Animal uTiger = new Tiger(p, f, h, new Animal.Boundaries(x, y), new Animal.Location(z, q));
-                            animal[animalNumberInMass] = uTiger;
-                            animalNumberInMass++;
+                            System.out.println("Enter a picture of the animal, whose information you would like to delete:");
+                            String delPic = scan.nextLine();
+                            deleteAnimal(delPic);
                             break;
-                        case '5':
-                            Animal uHippo = new Hippo(p, f, h, new Animal.Boundaries(x, y), new Animal.Location(z, q));
-                            animal[animalNumberInMass] = uHippo;
-                            animalNumberInMass++;
-                            break;
-                        case '6':
-                            Animal uWolf = new Wolf(p, f, h, new Animal.Boundaries(x, y), new Animal.Location(z, q));
-                            animal[animalNumberInMass] = uWolf;
-                            animalNumberInMass++;
-                            break;
+                        default:
+                            throw new IllegalStateException("Unexpected value: " + type);
                     }
-                case '2':
-                    System.out.println("Enter a picture of the animal, whose information you would like to see:");
-                    String infoPic = String.valueOf(scan.nextInt());
-                    Animal.getInfo(infoPic);
-                    break;
-                case '3':
-                    System.out.println("Enter a picture of the animal, whose information you would like to change:");
-                    String chPic = String.valueOf(scan.nextInt());
-                    changeFeature(chPic);
-                    break;
-                case '4':
-                    System.out.println("Enter a picture of the animal, whose information you would like to delete:");
-                    String delPic = String.valueOf(scan.nextInt());
-                    deleteAnimal(delPic);
-                    break;
+                    if (n == 5) return;
             }
-            if (n == 5) return;
         }
-
-
     }
 }

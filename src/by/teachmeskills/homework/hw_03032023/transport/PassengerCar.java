@@ -1,8 +1,8 @@
 package by.teachmeskills.homework.hw_03032023.transport;
 
 public class PassengerCar extends Terrestrial {
-    String carBodyType;
-    int passengerNum;
+    private String carBodyType;
+    private int passengerNum;
 
     public PassengerCar(int horsePower, int maxSpeed, int weight, String model, int wheelsNum, int fuelConsumption,
                         String carBodyType, int passengerNum) {
@@ -11,16 +11,19 @@ public class PassengerCar extends Terrestrial {
         this.fuelConsumption = fuelConsumption;
     }
 
-    public void getInfo() {
-        System.out.println("The weight of the car: " + this.weight);
-        System.out.println("The power of the car: " + this.horsePower);
-        System.out.println("The maximum speed of the car:" + this.maxSpeed);
-        System.out.println("The model of the car: " + this.model);
-        System.out.println("The number of wheels in the car: " + this.wheelsNum);
-        System.out.println("The fuel consumption of the car: " + this.fuelConsumption);
-        System.out.println("The number of passengers: " + this.passengerNum);
-        System.out.println("The car body type: " + this.carBodyType);
-        System.out.println("The kilowatts power of the car: " + this.kilowattePower());
+    @Override
+    public String toString() {
+        return "PassengerCar{" +
+                "carBodyType='" + carBodyType + '\'' +
+                ", passengerNum=" + passengerNum +
+                ", wheelsNum=" + wheelsNum +
+                ", fuelConsumption=" + fuelConsumption +
+                ", horsePower=" + horsePower +
+                ", maxSpeed=" + maxSpeed +
+                ", weight=" + weight +
+                ", kilowatts power=" + kilowattePower() +
+                ", model='" + model + '\'' +
+                '}';
     }
 
     private double spentFuel(double distance) {

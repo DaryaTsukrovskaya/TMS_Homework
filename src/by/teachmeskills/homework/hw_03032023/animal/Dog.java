@@ -16,9 +16,4 @@ public class Dog extends Canine {
     protected void eat() {
         System.out.println("The dog is eating dog food");
     }
-
-    @Override
-    protected void roam() {
-        System.out.println("The dog is roaming alone");
-    }
 }

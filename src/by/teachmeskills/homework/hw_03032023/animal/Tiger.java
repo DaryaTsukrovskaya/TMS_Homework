@@ -17,15 +17,4 @@ public class Tiger extends Feline {
         System.out.println("The tiger is eating meat");
     }
 
-    @Override
-    protected void roam() {
-        System.out.println("The tiger is roaming alone");
-    }
-    static void getInfo(String pic) {
-        for (int i = 0; i < animal.length; i++) {
-            if (animal[i].picture.equals(pic)) {
-                System.out.println(animal[i].food + animal[i].hunger + animal[i].boundaries + animal[i].location);
-            }
-        }
-    }
 }
